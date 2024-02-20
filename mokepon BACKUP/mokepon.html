@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mokepon</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+
+        <h1 class="titulos">Mokepon</h1>
+
+                <section id="seleccionar-mascota">
+                    <h2 class="titulos">Elige tu mascota:</h2>
+                    <div id="input-mascotas">
+                    </div>
+                    <button id="boton-mascota">Choose'em!</button>
+                </section>
+
+                <section id="ver-mapa">
+                    <h2 class="titulos">Recorre el mapa:</h2>
+                    <canvas id="mapa"></canvas>
+                    <button onpointerdown="moverPersonajeArriba()" onpointerup="detenerPersonaje()" onpointerleave="detenerPersonaje()">👆</button>
+                    <div>
+                        <button onpointerdown="moverPersonajeIzquierda()" onpointerup="detenerPersonaje()" onpointerleave="detenerPersonaje()">👈</button>
+                        <button onpointerdown="moverPersonajeAbajo()" onpointerup="detenerPersonaje()" onpointerleave="detenerPersonaje()">👇</button>
+                        <button onpointerdown="moverPersonajeDerecha()" onpointerup="detenerPersonaje()" onpointerleave="detenerPersonaje()">👉</button>
+                    </div>
+                </section>
+
+                <section id="seleccionar-ataque">
+
+                
+                    <h2 class="titulos">Elige tu ataque:</h2>
+
+                    <div id="input-ataques">
+                    </div>
+
+                    <div class="tabla-vidas-resultados">
+                        <div class="columnas">
+                            <p>Jugador: <b><span id="mascota-jugador"></span></b></p>
+                            <p class='vidas' id="vidas-jugador">0</p>
+                        </div>
+                        <div class="columnas">
+                            <p>Rival: <b><span id="mascota-rival"></span></b></p>
+                            <p class='vidas' id="vidas-rival">0</p>
+                        </div>
+                        <div id="recuadro-ultimo-resultado">
+                            <p id="ultimo-resultado"></p>
+                            <section id="reiniciar">
+                                <button id="boton-reiniciar">Otra vez!</button>
+                            </section>
+                        </div>
+                </section>
+
+        <section id="mensajes">
+            <p><span id='mensajes-ataques'></span></p>
+        </section>
+
+
+
+        <script src="./js/mokepon.js"></script>
+        
+    </body>
+</html>
